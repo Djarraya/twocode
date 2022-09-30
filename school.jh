@@ -1,0 +1,30 @@
+
+application {
+  config {
+    baseName myApp,
+    applicationType monolith,
+    packageName com.myapp,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework angular
+  }
+  entities *
+}
+
+entity Student {
+name String,
+email String,
+result Long
+}
+
+
+entity Class{
+name String
+}
+
+relationship ManyToOne {
+  Student to Class
+}
+
+
+    
